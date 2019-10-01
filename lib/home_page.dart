@@ -13,9 +13,25 @@ class HomePageState extends State<HomePage> {
         title: new Text("Calculator"),
       ),
       body: new Container(
-        child: new Center(
-          child: new Text("CalculatorApp"),
-        ),
+        padding: const EdgeInsets.all(20.0),
+        child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new TextField(
+                keyboardType: TextInputType.number,
+                decoration: new InputDecoration(hintText: "Enter Number 1"),
+              ),
+              new TextField(
+                keyboardType: TextInputType.number,
+                decoration: new InputDecoration(hintText: "Enter Number 1"),
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+              )
+            ]),
       ),
     );
   }
